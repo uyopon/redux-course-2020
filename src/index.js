@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-import { increment, decrement } from './actions'
+import { increment, decrement, asynkIncrement } from './actions'
 import { rootReducer } from './redux/rootReducer'
 import './styles.css'
 
@@ -18,6 +18,8 @@ cubBtn.addEventListener('click', () => {
     store.dispatch(decrement())   })
 
 asyncBtn.addEventListener('click', () => {
+    store.dispatch(asynkIncrement())
+
 })
 
 themeBtn.addEventListener('click', () => {
