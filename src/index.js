@@ -1,4 +1,4 @@
-import { createStore } from './createStore'
+import { createStore } from 'redux'
 import { rootReducer } from './redux/rootReducer'
 import './styles.css'
 
@@ -10,13 +10,11 @@ let themeBtn = document.getElementById('theme')
 
 const store = createStore(rootReducer, 0) // сперва происходит вызов
 
-
 addBtn.addEventListener('click', () => {
     store.dispatch({type:'INCREMENT'}) })
 
 cubBtn.addEventListener('click', () => {
     store.dispatch({type:'DECREMENT'})   })
-
 
 asyncBtn.addEventListener('click', () => {
 })
@@ -27,10 +25,9 @@ themeBtn.addEventListener('click', () => {
 themeBtn.addEventListener('click', () => {
 })
 
-
-store.subscribe(()=>{//передаем callbck в createStore.ЗАПУСКАЕТСЯ АВТОМАТИЧЕСКИ
-    const state = store.getState() //state = rootReducer
-    counter.textContent = state
+store.subscribe(()=>{//                                АВТОМАТИЧЕСКИ
+    const thisstate = store.getState() 
+    counter.textContent = thisstate
 })
 
-store.dispatch({type:'INIT_APPLICATION'})//запускается автоматически атрисовывает счетчик
+store.dispatch({type:'INIT_APPLICATION'})//        АВТОМАТИЧЕСКИ

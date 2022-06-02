@@ -29,10 +29,10 @@ asyncBtn.addEventListener('click', () => {
     render()
 })
 
-themeBtn.addEventListener('click', () => {
-    state--
+// themeBtn.addEventListener('click', () => {
+//     state--
 
-})
+// })
 
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark')
