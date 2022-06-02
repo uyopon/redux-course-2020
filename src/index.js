@@ -1,4 +1,5 @@
 import { createStore } from 'redux'
+import { increment, decrement } from './actions'
 import { rootReducer } from './redux/rootReducer'
 import './styles.css'
 
@@ -11,10 +12,10 @@ let themeBtn = document.getElementById('theme')
 const store = createStore(rootReducer, 0) // сперва происходит вызов
 
 addBtn.addEventListener('click', () => {
-    store.dispatch({type:'INCREMENT'}) })
+    store.dispatch(increment()) })
 
 cubBtn.addEventListener('click', () => {
-    store.dispatch({type:'DECREMENT'})   })
+    store.dispatch(decrement())   })
 
 asyncBtn.addEventListener('click', () => {
 })
