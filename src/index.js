@@ -23,9 +23,7 @@ asyncBtn.addEventListener('click', () => {
 })
 
 themeBtn.addEventListener('click', () => {
-})
-
-themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark')
 })
 
 store.subscribe(()=>{//                                АВТОМАТИЧЕСКИ
